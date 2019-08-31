@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root{
+    --primary-color:#e53935;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+  }
+
+/*NAVBAR*/
+nav{
+    background: url('../img/bakeGirl.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    margin-top: 0;
+}
+
+#nav-content{
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0,0,0.6);
+}
+
+#navbar{
+    /* padding: 0.7rem ; */
+    max-width: 95vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#logo{
+    padding:5px;
+}
+#navbar ul{
+    list-style-type: none;
+}
+#navbar ul li{
+    display: inline-block;
+    padding: 5px;
+}
+#navbar ul li:hover{
+    background: #646363;
+}
+
+
+
+#navbar ul a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* SHOWCASE */
+#showcase{
+    height: 90vh;
+}
+
+/*class h-jump para hacer un salto de linea*/
+.h-jump{
+    display: block;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+#showcase-content{
+    padding: 20vw;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+/* squares */
+.info-squares{
+    display: flex;
+    height: 40vh;
+    flex-wrap: no-wrap;
+}
+.square1{
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 9vw;
+    flex: 50%;
+}
+
+.square2{
+    background: #ffcdd2;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 9vw;
+    flex: 50%;
+}
+
+/*seccion ven a desayunar*/
+#ven{
+    height: 60vh;
+    background: url('../img/foodTable.jpg') no-repeat center center/cover;
+}
+#ven h1{
+    font-size: 2rem;
+
+}
+
+#ven-content{
+    height: 100%;
+    background: rgba(0, 0,0,0.7);
+    color: white;
+    padding: 0 20vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.btn{
+    margin:5px auto;;
+    /* width: 70%; */
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    border: 0.5px solid;
+}
+
+/*items section*/
+#items{
+    display: flex;
+    flex-wrap: no-wrap;
+    background: #ECECEC;
+}
+
+.item{
+    flex: 50%;
+    padding: 1rem;
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+}
+
+.item h1{
+    text-align: center;
+}
+
+.item i{
+    font-size: 3rem;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 50%;
+    background: var(--primary-color);
+    margin: 1rem;
+}
+
+#main-footer{
+    background: #333333;
+    height: 5vh;
+    text-align: center;
+    color: white;
+}
+
+
+/*Mobile version*/
+@media(max-width:600px){
+    #navbar{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-squares{
+        flex-wrap: wrap;
+    }
+    #showcase-content{
+        padding: 50px;
+        margin-top: -80px;
+
+    }
+
+    #ven-content{
+        padding: 10px;
+    }
+    #items{
+        display: flex;
+        flex-wrap: wrap;
+        background: #ECECEC;
+    }
+    .item{
+        flex: 100%;
+        text-align: center;
+    }
+
+    .square1,.square2{
+        padding: 5vw;
+        flex: 100%;
+    }
+
+    .info-squares{
+        /*se tenia problema con el flex wrap
+        al parecer se desborda porque el flex container era de 40 wh
+        inicialmente y al hacerle wrap ambos seguian con 40vh porque era del padre pero ahora uno sobre otro*/
+        height: 80vh;
+    }
+
+    #main-footer{
+        height: auto;
+        padding: 5px;
+    }
+}
