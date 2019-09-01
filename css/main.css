@@ -2,6 +2,7 @@
 
 :root{
     --primary-color:#e53935;
+    --overlay-color:rgba(0, 0,0,0.45);
 }
 
 *{
@@ -26,7 +27,7 @@ nav{
 #nav-content{
     height: 100%;
     width: 100%;
-    background: rgba(0, 0,0,0.6);
+    background: var(--overlay-color);
 }
 
 #navbar{
@@ -124,7 +125,7 @@ h1{
 
 #ven-content{
     height: 100%;
-    background: rgba(0, 0,0,0.7);
+    background:  var(--overlay-color);
     color: white;
     padding: 0 20vw;
     margin: auto;
@@ -148,17 +149,18 @@ h1{
 /*items section*/
 #items{
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: wrap;
     background: #ECECEC;
+    padding: 1rem;
 }
 
 .item{
     flex: 50%;
     padding: 1rem;
+    justify-content: center;
+    align-items: center;
+
     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-wrap: wrap;
 }
 
 .item h1{
@@ -168,7 +170,7 @@ h1{
 .item i{
     font-size: 3rem;
     color: white;
-    padding: 1.5rem;
+    padding: 2rem ;
     border-radius: 50%;
     background: var(--primary-color);
     margin: 1rem;
@@ -210,6 +212,7 @@ h1{
     .item{
         flex: 100%;
         text-align: center;
+        display: block;
     }
 
     .square1,.square2{
